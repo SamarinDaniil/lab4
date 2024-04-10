@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     override fun onSensorChanged(event: SensorEvent?) {
         var degree:Int = event?.values?.get(0)?.toInt() !!
         val textView: TextView = findViewById(R.id.txDegrees)
-        val imageView: ImageView = findViewById(R.id.imMovCompas)
+        val imageView: ImageView = findViewById(R.id.imStaticCompas)
         textView.text = degree.toString()
         var rotateAnim = RotateAnimation(current_degree.toFloat(),(-degree.toFloat()),
             Animation.RELATIVE_TO_SELF, 0.5f,Animation.RELATIVE_TO_SELF,0.5f )
